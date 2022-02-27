@@ -9,11 +9,14 @@ const todoButton = document.querySelector('.todo-button');
 // selects class todo-list from html and stores in variable
 const todoList = document.querySelector('.todo-list');
 
+// selects class filter-tdo from html stores in variable
+const filterOption = document.querySelector('.filter-todo')
+
 //------------Event Listeners---------//
 
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
-
+filterOption.addEventListener('click', filterTodo);
 
 //------------Functions---------------//
 function addTodo(event) {
@@ -70,4 +73,9 @@ function deleteCheck(e){
         const todo = item.parentElement;
         todo.classList.toggle('completed');
     }
+}
+
+function filterToDo(e){
+    const todos = todoList.childNodes;
+    todos.forEach()
 }
